@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    p{
+      font-family: 'Montserrat', sans-serif;
+      font-size:14px;
+      font-weight: 500;
+    }
+    h1{
+      font-family:"Fraunces", serif;;
+    }
+
+    #image{
+      width: 70%;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+    }
+    body{
+      background-color:hsl(30, 38%, 92%) ;
+    }
+    @media screen and (max-width: 375px) {
+      #image{
+        background-image: url('images/image-product-mobile.jpg');
+        width: 70%;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      }
+      .container{
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+
+    @media screen and (min-width: 376px) {
+      #image{
+        background-image: url('images/image-product-desktop.jpg');
+       
+      }
+    }
+  
+  </style>
+</head>
+<body>
+  <div id="container" class="ml-80 mt-44 w-2/4 flex border shadow-xl rounded-md flex-shrink-0">
+      <div id="image" class="w-2/5 rounded-tl-md rounded-bl-md"></div>
+
+ <div class=" px-10 py-3 flex flex-col gap-5 bg-white rounded-tr-md rounded-br-md">
+  <p class="text-gray-500">P E R F U M E</p>
+
+  <h1 class="text-3xl font-extrabold w-3/4">Gabrielle Essence Eau De Parfum</h1>
+
+  <p class="w-2/4 text-gray-500 center">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+  Perfumer-Creator for the House of CHANEL.</p>
+<div class="flex gap-2 items-center">
+  <h2 class="text-2xl font-extrabold" style="color:hsl(158, 36%, 37%);">$149.99</h2>
+  <p style="text-decoration: line-through;">$169.99</p>
+</div>
+<div>
+ <button class="flex justify-center p-1 border rounded-md text-white" style="background-color:hsl(158, 36%, 37%);"><img src="images/shopping-cart - Copy.png" alt="" width="15px"><p class="ml-2 text-white">Add to Cart</p></button> 
+</div>
+</div>
+
+</div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Nishar Ahamed.</a>
+  </div>
+</body>
+</html>
